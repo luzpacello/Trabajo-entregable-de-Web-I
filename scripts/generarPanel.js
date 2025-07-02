@@ -1,6 +1,6 @@
 const carouselInner = document.getElementById('carouselInner');
 const cantidad = 6;
-const fondo = './img/fondo-poke.jpg';
+const fondo = './img/fondo-poke2.jpg';
 
 for (let i = 1; i <= cantidad; i++) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
@@ -20,13 +20,13 @@ for (let i = 1; i <= cantidad; i++) {
             slide.innerHTML = `
                 <div class="container h-100 d-flex align-items-center justify-content-center">
                     <div class="row w-100 align-items-center">
-                        <div class="col-md-6 text-center">
-                            <img src="${data.sprites.front_default}" alt="${data.name}" style="width: 200px;">
+                        <div class="col-6 img-poke">
+                            <img src="${data.sprites.front_default}" alt="${data.name}">
                         </div>
-                        <div class="col-md-6 text-white text-center">
+                        <div class="col-6 info-poke">
                             <h2 class="fw-bold">${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h2>
-                            <p class="fs-4 text-decoration-line-through text-danger">$${precioOriginal}</p>
-                            <p class="fs-2 fw-bold text-success">$${precioNuevo}</p>
+                            <p class="fs-4 text-decoration-line-through">$${precioOriginal}</p>
+                            <p class="fs-2 fw-bold">$${precioNuevo}</p>
                         </div>
                     </div>
                 </div>
@@ -34,5 +34,5 @@ for (let i = 1; i <= cantidad; i++) {
 
             carouselInner.appendChild(slide);
         })
-        .catch(err => console.error('Error al cargar el Pokémon:', err));
+            .catch(err => console.error('Error al cargar el Pokémon:', err));
     }

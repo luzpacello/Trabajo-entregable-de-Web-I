@@ -1,19 +1,8 @@
-@use 'variables';
+@use 'variables' as *;
 
-
-@each $tipo, $color in variables.$tipo-colores {
+@each $tipo, $color in $tipo-colores {
     .tipo-#{$tipo} {
         background-color: $color;
+        color: white;
     }
 }
-/*.tipo {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    color: white;
-    text-transform: capitalize;
-    font-size: 0.9rem;
-    margin: 2px;
-}
-*/

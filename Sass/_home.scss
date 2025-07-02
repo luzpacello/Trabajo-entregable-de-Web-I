@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+@use 'variables' as *;
 
 * {
     margin: 0;
@@ -10,99 +11,121 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    .navbar{
+        @include fondo-degradado($color-primario, $color-secundario, 45deg);
+        
+        h2{
+            @include combo-fonts('Courier New', 'Oswald-Regular', bold);
+            color: rgb(246, 247, 248);
+        }
+        .navbar-toggler {
+            background-color: rgb(255, 255, 255);
+        }
+        a{
+            color: antiquewhite;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover{
+            color: black;
+        }
+    }
+
+    .content {
+        flex: 1; // ocupa todo el espacio disponible
+        //NO LO QUITEN, ENSERIO LO DIGO 👺
+        padding: 10px;
+        .carousel{
+            .carousel-inner img {
+                width: 100%;
+                object-fit: contain;
+                margin: 0 auto;
+                display: block;
+            }
+            .carousel-item {
+                height: 300px;
+                width: 100%;
+                background-size: contain;
+                background-position: bottom;
+                background-repeat: no-repeat;
+            }
+
+            .pokemon-solo {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                z-index: 10;
+
+                img {
+                    width: 150px;
+                    height: auto;
+                }
+            }
+            .img-poke{
+                display: flex;
+                width: 250px;
+                img{
+                    width: 300px;
+                    object-fit: cover;
+                }
+            }
+            .info-poke{
+                background-color: #ffffff10;
+                border: 1px solid #ffffff50;
+                backdrop-filter: blur(0.1rem);
+                -webkit-backdrop-filter: blur(0.1rem);
+                color: rgb(0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                border-radius: 0.875rem;
+                h2,
+                p{
+                    align-self: center;
+                }
+                h2{
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin-bottom: 0%;
+                }
+            }
+        }
+    }
+    .contact-sect {
+        background-color: rgb(220, 241, 250);
+        border-radius: 15px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        height: auto;
+        align-self: flex-start;
+    }
+    footer{
+        @include fondo-degradado($color-primario-footer, $color-secundario-footer, 45deg);
+    
+        .text-muted {
+            font-weight: bold;
+        }
+        li{
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+    }
 }
 
-.content {
-    flex: 1; // ocupa todo el espacio disponible
-    //NO LO QUITEN, ENSERIO LO DIGO 👺
-    padding: 10px;
-}
-
-.navbar-toggler {
-    background-color: antiquewhite;
-}
-
-h2 {
-
-    color: rgb(162, 212, 255);
-}
-
-.nav-link {
-    color: antiquewhite;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.carousel-inner img {
-    width: 100%;
-}
-
-.card-link {
-    text-decoration: none;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.contact-sect {
-    background-color: rgb(220, 241, 250);
-    border-radius: 15px;
-    padding-bottom: 10px;
-    height: auto;
-    align-self: flex-start;
-}
-
-.text-muted {
-    font-weight: bold;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: antiquewhite;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: black;
-}
-
-/* Opcional: estilo base para todos los botones */
-button {
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-.carousel-item {
-    position: relative;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.pokemon-solo {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-}
-
-.pokemon-solo img {
-    width: 150px;
-    height: auto;
-}
-
-.card.tipo {
+.card.tipo{
     @include  tipo-card-style;
 }
+

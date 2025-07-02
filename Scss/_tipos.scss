@@ -1,0 +1,19 @@
+@use 'variables';
+
+
+@each $tipo, $color in variables.$tipo-colores {
+    .tipo-#{$tipo} {
+        background-color: $color;
+    }
+}
+/*.tipo {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    margin: 2px;
+}
+*/

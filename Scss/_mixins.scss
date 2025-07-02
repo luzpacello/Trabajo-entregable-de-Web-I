@@ -1,0 +1,22 @@
+@mixin fondo-degradado($color1, $color2, $grado) {
+    background: linear-gradient($grado, $color1, $color2);
+}
+@mixin fondo-degradado-alt($color1, $color2, $grado) {
+    background: -webkit-linear-gradient($grado, $color1, $color2);
+    background: -moz-linear-gradient($grado, $color1, $color2);
+    background: linear-gradient($grado, $color1, $color2);
+}
+
+@mixin combo-fonts($pri-font, $sec-font, $weight: normal, $size: 25px) {
+    font-family: $pri-font, $sec-font;
+    font-weight: $weight;
+    font-size: $size;
+}
+@mixin tipo-card-style {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 40px 0;
+    border: none;
+}

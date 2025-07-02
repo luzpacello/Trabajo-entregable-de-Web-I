@@ -1,0 +1,108 @@
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1; // ocupa todo el espacio disponible
+    //NO LO QUITEN, ENSERIO LO DIGO 👺
+    padding: 10px;
+}
+
+.navbar-toggler {
+    background-color: antiquewhite;
+}
+
+h2 {
+
+    color: rgb(162, 212, 255);
+}
+
+.nav-link {
+    color: antiquewhite;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.carousel-inner img {
+    width: 100%;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contact-sect {
+    background-color: rgb(220, 241, 250);
+    border-radius: 15px;
+    padding-bottom: 10px;
+    height: auto;
+    align-self: flex-start;
+}
+
+.text-muted {
+    font-weight: bold;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: black;
+}
+
+/* Opcional: estilo base para todos los botones */
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.carousel-item {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.pokemon-solo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.pokemon-solo img {
+    width: 150px;
+    height: auto;
+}
+
+.card.tipo {
+    @include  tipo-card-style;
+}

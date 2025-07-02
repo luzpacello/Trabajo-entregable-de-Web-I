@@ -1,0 +1,38 @@
+//  Paleta base de Home.html
+$color-primario: #8a2020;   
+$color-secundario: #c42b2b;
+$color-primario-footer: #0a35ac;
+$color-secundario-footer: #2a3cdb;
+
+//  ----------------
+
+// Paleta base de Carga.html (solo header).
+$color-pri-carga: #00ff88ee;
+$color-sec-carga: #1bc1f8;
+
+// -----------------
+
+// colores por tipo
+$tipo-colores: (
+    normal:    #A8A77A,
+    fighting:  #C22E28,
+    flying:    #A98FF3,
+    poison:    #A33EA1,
+    ground:    #E2BF65,
+    rock:      #B6A136,
+    bug:       #A6B91A,
+    ghost:     #735797,
+    steel:     #B7B7CE,
+    fire:      #EE8130,
+    water:     #6390F0,
+    grass:     #7AC74C,
+    electric:  #F7D02C,
+    psychic:   #F95587,
+    ice:       #96D9D6,
+    dragon:    #6F35FC,
+    dark:      #705746,
+    fairy:     #D685AD,
+    shadow:    #444444,
+    unknown:   #999999,
+    stellar:   #7B61FF
+);

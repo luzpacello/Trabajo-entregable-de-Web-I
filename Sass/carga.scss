@@ -12,8 +12,8 @@ header {
     min-width: 320px;    
     @include combo-fonts('Arial', 'Oswald-Regular', bold);
     border-radius: 1.5em;
-    .perry{
-        margin: 10px;
+    .logo{
+        margin: 5px;
         height: 80px;
         border-radius: 50%;
         border: 5px solid gray;
@@ -58,7 +58,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-position: center;
-    background-image: url("https://preview.redd.it/why-is-doofensmirtz-evil-inc-shaped-like-a-wrench-or-ferbs-v0-s91ybkti2ync1.jpeg?auto=webp&s=494d4dc50b553e8c227b75a1610d8c35d7cae0fb");
+    background-image: url("https://wallpaper.forfun.com/fetch/d2/d24867a482f590a7bc2a013f8b6bcb0e.jpeg");
 }
 
 @media (max-width: 900px) {

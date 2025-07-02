@@ -30,19 +30,19 @@
   </header>
   <div class="content text-center">    
     <div class="row">
-    <form>
+    <form method="GET" action="?">
       <div class="col-md-auto">
         <div class="box1">
         <p>Agregar Articulo</p>
-        <input type="name" placeholder="Agregar">
+        <input type="text" name="articulo" placeholder="Agregar">
         <br>
         <br>
         <p>Descripción</p>
-        <textarea placeholder="Observaciones del producto"></textarea>
+        <textarea name="Espaciodetexto" placeholder="Descripción"></textarea>
         <br>
         <br>
         <p>Tipo de producto</p>
-        <select>
+        <select name="opciones">
           <option value="value1">Lacteos</option>
           <option value="value2">Carnes</option>
           <option value="value3">Tecnología</option>
@@ -68,7 +68,7 @@
         <br>
         <br>
         <p>Precio</p>
-        <input type="name" placeholder="ingrese monto">
+        <input type="text" name="valorProducto" placeholder="Precio">
         <br>
         <br>
         </div>

@@ -9,7 +9,7 @@ fetch("https://pokeapi.co/api/v2/type")
         const verTodos = document.createElement("div");
         verTodos.classList.add("col");
         verTodos.innerHTML = `
-            <a href="lista.html#Todos" class="text-decoration-none">
+            <a href="listado.html#Todos" class="text-decoration-none">
                 <div class="card tipo bg-dark">
                     Ver todos
                 </div>
@@ -26,7 +26,7 @@ fetch("https://pokeapi.co/api/v2/type")
             col.classList.add("col");
 
             col.innerHTML = `
-                <a href="lista.html#${nombreCapitalizado}" class="text-decoration-none">
+                <a href="listado.html#${nombreCapitalizado}" class="text-decoration-none">
                     <div class="card tipo tipo-${nombre}">
                         ${nombreCapitalizado}
                     </div>

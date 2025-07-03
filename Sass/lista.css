@@ -16,167 +16,202 @@ body {
 header {
   background: linear-gradient(90deg, #3b4cca, #ffcb05);
   padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-header img {
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .nav img {
   height: 50px;
 }
-header nav ul {
+header .nav .nav-list {
   display: flex;
   gap: 1rem;
   list-style: none;
+  margin: 0;
 }
-header nav ul li button {
+header .nav .nav-list .nav-item .btn-header {
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.3rem;
-  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
-header nav ul li button:hover {
+header .nav .nav-list .nav-item .btn-header:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+header .nav .nav-list .nav-item .btn-header.active {
   background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
 }
 
 main {
   flex: 1;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
-main #todos .pokemon-todos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-main #todos .pokemon-todos .pokemon {
+main .pokemon-card {
   background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: transform 0.2s ease;
-  position: relative;
 }
-main #todos .pokemon-todos .pokemon:hover {
+main .pokemon-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
-main #todos .pokemon-todos .pokemon .pokemon-id-back {
+main .pokemon-card .pokemon-id-back {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 3rem;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
   font-weight: 900;
   color: rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
-main #todos .pokemon-todos .pokemon .pokemon-imagen img {
-  width: 150px;
-  height: 150px;
+main .pokemon-card .pokemon-imagen {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+main .pokemon-card .pokemon-imagen img {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   z-index: 1;
+  position: relative;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info {
-  margin-top: 1rem;
-  width: 100%;
+main .pokemon-card .pokemon-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor {
+main .pokemon-card .pokemon-info .nombre-contenedor {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor .pokemon-id {
+main .pokemon-card .pokemon-info .nombre-contenedor .pokemon-id {
   font-weight: 700;
   color: #2d3ba5;
+  font-size: 0.9rem;
+  margin: 0;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor .pokemon-nombre {
-  font-size: 1.5rem;
+main .pokemon-card .pokemon-info .nombre-contenedor .pokemon-nombre {
+  font-size: 1.3rem;
   font-weight: 900;
   text-transform: capitalize;
+  margin: 0;
+  color: #222;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos {
-  margin-top: 0.5rem;
+main .pokemon-card .pokemon-info .pokemon-tipos {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p {
-  font-size: 0.8rem;
+main .pokemon-card .pokemon-info .pokemon-tipos p {
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 1rem;
   color: white;
+  margin: 0;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.normal {
+main .pokemon-card .pokemon-info .pokemon-tipos p.normal {
   background-color: #A8A77A;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fire {
+main .pokemon-card .pokemon-info .pokemon-tipos p.fire {
   background-color: #EE8130;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.water {
+main .pokemon-card .pokemon-info .pokemon-tipos p.water {
   background-color: #6390F0;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.electric {
+main .pokemon-card .pokemon-info .pokemon-tipos p.electric {
   background-color: #F7D02C;
+  color: #222;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.grass {
+main .pokemon-card .pokemon-info .pokemon-tipos p.grass {
   background-color: #7AC74C;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ice {
+main .pokemon-card .pokemon-info .pokemon-tipos p.ice {
   background-color: #96D9D6;
+  color: #222;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fighting {
+main .pokemon-card .pokemon-info .pokemon-tipos p.fighting {
   background-color: #C22E28;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.poison {
+main .pokemon-card .pokemon-info .pokemon-tipos p.poison {
   background-color: #A33EA1;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ground {
+main .pokemon-card .pokemon-info .pokemon-tipos p.ground {
   background-color: #E2BF65;
+  color: #222;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.flying {
+main .pokemon-card .pokemon-info .pokemon-tipos p.flying {
   background-color: #A98FF3;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.psychic {
+main .pokemon-card .pokemon-info .pokemon-tipos p.psychic {
   background-color: #F95587;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.bug {
+main .pokemon-card .pokemon-info .pokemon-tipos p.bug {
   background-color: #A6B91A;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.rock {
+main .pokemon-card .pokemon-info .pokemon-tipos p.rock {
   background-color: #B6A136;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ghost {
+main .pokemon-card .pokemon-info .pokemon-tipos p.ghost {
   background-color: #735797;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.dragon {
+main .pokemon-card .pokemon-info .pokemon-tipos p.dragon {
   background-color: #6F35FC;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.dark {
+main .pokemon-card .pokemon-info .pokemon-tipos p.dark {
   background-color: #705746;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.steel {
+main .pokemon-card .pokemon-info .pokemon-tipos p.steel {
   background-color: #B7B7CE;
+  color: #222;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fairy {
+main .pokemon-card .pokemon-info .pokemon-tipos p.fairy {
   background-color: #D685AD;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-stats {
-  margin-top: 0.7rem;
+main .pokemon-card .pokemon-info .pokemon-stats {
+  margin-top: auto;
   display: flex;
   justify-content: space-around;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
 }
-main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-stats .stat {
-  font-size: 0.9rem;
+main .pokemon-card .pokemon-info .pokemon-stats .stat {
+  text-align: center;
+}
+main .pokemon-card .pokemon-info .pokemon-stats .stat .stat-titulo {
+  font-size: 0.8rem;
   font-weight: 600;
+  color: #666;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+}
+main .pokemon-card .pokemon-info .pokemon-stats .stat .stat-numero {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b4cca;
+  margin: 0;
 }
 
 footer {
@@ -185,4 +220,5 @@ footer {
   padding: 1rem 2rem;
   text-align: center;
   font-weight: bold;
-}/*# sourceMappingURL=lista.css.map */
+  margin-top: auto;
+}

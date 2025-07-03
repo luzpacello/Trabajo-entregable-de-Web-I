@@ -223,3 +223,28 @@ footer {
 	font-weight: bold;
 	margin-top: auto;
 }
+
+@media (max-width: 500px) {
+	header{
+		width: 600px;
+		margin: 0 auto;
+		
+	}
+	.nav {
+		
+		img{
+			
+		}
+	}
+
+	.pokemon-card {
+
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	footer {
+ 	 	width: 600px;
+ 	 	margin: 0 auto;
+	}
+}

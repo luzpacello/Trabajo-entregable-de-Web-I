@@ -89,7 +89,8 @@ main .pokemon-card .pokemon-imagen {
 main .pokemon-card .pokemon-imagen img {
   width: 120px;
   height: 120px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   z-index: 1;
   position: relative;
 }
@@ -222,3 +223,18 @@ footer {
   font-weight: bold;
   margin-top: auto;
 }
+
+@media (max-width: 500px) {
+  header {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .pokemon-card {
+    width: 500px;
+    margin: 0 auto;
+  }
+  footer {
+    width: 600px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=lista.css.map */

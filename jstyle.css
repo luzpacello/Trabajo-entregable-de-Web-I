@@ -4,15 +4,20 @@
   background-image: url(img/unposiblefondo.jpg);
   background-size:cover;
   background-repeat: no-repeat;
-  background-position: center;
-  padding: 0;
-  margin: 0;
+  background-position: center;  
+  width: 300px;
   border-style: solid;
   border-color: black;
+  text-align: center;
+  margin: 0 auto;
 }
 
 body{
-  background-color:aquamarine;
-  background-size: 6rem;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-position: center;
+  background-image: url("https://imgs.search.brave.com/wKS97mt-Jvl_5qDWmti2QHOd9RXQmBWVX7Tq3zJ5XdE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wNC53/YWxscGFwZXJiZXR0/ZXIuY29tL3dhbGxw/YXBlci83NjEvODY3/LzU4Ni9wb2tlbW9u/LXZpZGVvLWdhbWVz/LW1pbmltYWxpc20t/cG9rZW1vbi1maXJz/dC1nZW5lcmF0aW9u/LXdhbGxwYXBlci1w/cmV2aWV3LmpwZw");
 }
 h2{color: red;}
+

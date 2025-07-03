@@ -1,0 +1,18 @@
+
+.coloramarillo{color:rgb(234, 255, 0); font-size: 3rem;}
+    .juan {
+  background-image: url(img/unposiblefondo.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  border-style: solid;
+  border-color: black;
+}
+
+body{
+  background-color:aquamarine;
+  background-size: 6rem;
+}
+h2{color: red;}

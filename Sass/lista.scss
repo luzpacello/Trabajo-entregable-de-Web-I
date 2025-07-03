@@ -74,6 +74,12 @@ header {
 						transform: scale(1.05);
 					}
 				}
+
+				a.btn-header {
+					&:hover {
+						color: white;
+					}
+				}
 			}
 		}
 	}
@@ -93,6 +99,7 @@ main {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		cursor: pointer;
 
 		&:hover {
 			transform: translateY(-5px);
@@ -216,35 +223,6 @@ main {
 }
 
 footer {
-	background: $color-primario;
-	color: white;
-	padding: 1rem 2rem;
-	text-align: center;
-	font-weight: bold;
-	margin-top: auto;
-}
-
-@media (max-width: 500px) {
-	header{
-		width: 600px;
-		margin: 0 auto;
-		
-	}
-	.nav {
-		
-		img{
-			
-		}
-	}
-
-	.pokemon-card {
-
-		width: 500px;
-		margin: 0 auto;
-	}
-
-	footer {
- 	 	width: 600px;
- 	 	margin: 0 auto;
-	}
+	width: 600px;
+	margin: 0 auto;
 }

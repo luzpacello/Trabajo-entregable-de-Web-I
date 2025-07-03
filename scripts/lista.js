@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 					types: detail.types.map(type => type.type.name),
 					price: (Math.random() * 10000 + 1000).toFixed(0),
 					stock: Math.floor(Math.random() * 50 + 10),
-					id: detail.id
+					id: detail.id,
+					height: detail.height,
+					weight: detail.weight,
+					abilities: detail.abilities
 				};
 			});
 
@@ -28,14 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
-	// Display Pokemon cards
 	function displayPokemons(pokemons) {
 		container.innerHTML = '';
 		pokemons.forEach(pokemon => {
 			const col = document.createElement('div');
 			col.className = 'col';
 			col.innerHTML = `
-				<div class="pokemon-card">
+				<div class="pokemon-card" onclick="goToFicha('${pokemon.name}', ${pokemon.id})">
 					<div class="pokemon-id-back">#${pokemon.id.toString().padStart(3, '0')}</div>
 					<div class="pokemon-imagen">
 						<img src="${pokemon.image}" alt="${pokemon.name}">
@@ -105,6 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.querySelectorAll('.btn-header').forEach(btn => btn.classList.remove('active'));
 		document.getElementById('electric').classList.add('active');
 	});
+
+	window.goToFicha = function(pokemonName, pokemonId) {
+		const pokemon = allPokemons.find(p => p.name === pokemonName && p.id === pokemonId);
+		if (pokemon) {
+			sessionStorage.setItem('selectedPokemon', JSON.stringify(pokemon));
+			window.location.href = '1ficha.html';
+		}
+	};
 
 	loadAllPokemons();
 });

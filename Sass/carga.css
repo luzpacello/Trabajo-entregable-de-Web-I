@@ -37,8 +37,7 @@ nav {
   border: 5px transparent;
   border-radius: 1.5em;
   font-weight: bold;
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   padding: 20px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
 }
@@ -47,8 +46,7 @@ nav {
   display: inline-block;
   border: 5px transparent;
   border-radius: 1.5em;
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   padding: 17px;
   font-weight: bold;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);

@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(90deg, #3b4cca, #ffcb05);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+header img {
+  height: 50px;
+}
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+header nav ul li button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+header nav ul li button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main #todos .pokemon-todos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+main #todos .pokemon-todos .pokemon {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+main #todos .pokemon-todos .pokemon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+main #todos .pokemon-todos .pokemon .pokemon-id-back {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+main #todos .pokemon-todos .pokemon .pokemon-imagen img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  z-index: 1;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info {
+  margin-top: 1rem;
+  width: 100%;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor .pokemon-id {
+  font-weight: 700;
+  color: #2d3ba5;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .nombre-contenedor .pokemon-nombre {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  color: white;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.normal {
+  background-color: #A8A77A;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fire {
+  background-color: #EE8130;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.water {
+  background-color: #6390F0;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.electric {
+  background-color: #F7D02C;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.grass {
+  background-color: #7AC74C;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ice {
+  background-color: #96D9D6;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fighting {
+  background-color: #C22E28;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.poison {
+  background-color: #A33EA1;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ground {
+  background-color: #E2BF65;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.flying {
+  background-color: #A98FF3;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.psychic {
+  background-color: #F95587;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.bug {
+  background-color: #A6B91A;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.rock {
+  background-color: #B6A136;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.ghost {
+  background-color: #735797;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.dragon {
+  background-color: #6F35FC;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.dark {
+  background-color: #705746;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.steel {
+  background-color: #B7B7CE;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-tipos p.fairy {
+  background-color: #D685AD;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-stats {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-around;
+}
+main #todos .pokemon-todos .pokemon .pokemon-info .pokemon-stats .stat {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+footer {
+  background: #3b4cca;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: bold;
+}/*# sourceMappingURL=lista.css.map */
